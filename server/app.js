@@ -6,6 +6,6 @@ const app = express();
 
 invokeMiddelwares(app)
 
-app.set('PORT', process.env.PORT || 9000);
+app.set('PORT', process.env.PORT || 8080);
 
 module.exports = app;

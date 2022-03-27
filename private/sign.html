@@ -4,9 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon">
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Calling CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media.css">
+    <!-- Page Title -->
     <title>Socially</title>
 </head>
 <body>
-    <h1>Create an Account! || Login!</h1>
+    <div class="sign-container">
+        <div class="form-container">
+            <div class="signin-singup">
+                <!-- Singin Form -->
+                <form class="signin-form">
+                    <!-- Form Title -->
+                    <h2 class="form-title">Sign in</h2>
+                    <!-- Input Field -->
+                    <div class="input-field">
+                        <i class="ri-user-3-fill"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <!-- Input Field -->
+                    <div class="input-field">
+                        <i class="ri-lock-fill"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <button class="btn slolid" type="button" id="login">Login</button>
+                </form>
+                
+                <!-- Signup Form -->
+                <form class="signup-form">
+                    <!-- Form Title -->
+                    <h2 class="form-title">Sign up</h2>
+                    <!-- Input Field -->
+                    <div class="input-field">
+                        <i class="ri-user-3-fill"></i>
+                        <input type="text" id="signup-username" placeholder="Username">
+                    </div>
+                    <!-- Input Field -->
+                    <div class="input-field">
+                        <i class="ri-user-3-fill"></i>
+                        <input type="email" id="signup-email" placeholder="Email Address">
+                    </div>
+                    <!-- Input Field -->
+                    <div class="input-field">
+                        <i class="ri-lock-fill"></i>
+                        <input type="password" id="signup-password" placeholder="Password">
+                    </div>
+                    <!-- Input Field -->
+                    <div class="input-field">
+                        <i class="ri-lock-fill"></i>
+                        <input type="password" id="signup-confirm" placeholder="Confirm Password">
+                    </div>
+                    <button class="btn slolid" type="button" id="signup">sign up</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>New here?</h3>
+                    <button class="btn transparent" id="signup-btn">Sign up</button>
+                </div>
+
+                <img src="/img/signin.svg" alt="Signin">
+            </div>
+
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>One of us?</h3>
+                    <button class="btn transparent" id="signin-btn">Sign in</button>
+                </div>
+
+                <img src="/img/signup.svg" alt="Signup">
+            </div>
+        </div>
+    </div>
+
+    <!-- Calling JavaScript Files -->
+    <script src="/js/sign.js"></script>
 </body>
 </html>
