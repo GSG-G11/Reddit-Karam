@@ -4,6 +4,8 @@
   "description": "Cloen Reddit Website",
   "main": "index.js",
   "scripts": {
+    "start": "NODE_ENV=prod node server/index.js",
+    "dev": "cross-env NODE_ENV=dev nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
