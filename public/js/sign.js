@@ -10,6 +10,18 @@ signinBtn.addEventListener('click', (e) => {
     signContainer.classList.remove('signup-mode');
 });
 
+// Check Mode Function
+const checkMode = () => {
+    const mode = window.location.href.split('#')[1];
+    if(mode){
+        signContainer.classList.add(mode);
+    } else {
+        return false;
+    }
+}
+
+window.onload = checkMode();
+
 // Generate Error Message Function
 const inputsContainer = document.getElementsByClassName('input-container');
 
