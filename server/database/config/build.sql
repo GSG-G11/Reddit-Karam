@@ -45,4 +45,10 @@ CREATE TABLE votes (
     FOREIGN KEY (post_id) REFERENCES posts(id)
 );
 
+-- INSERT INTO users (username, email, password) VALUES (
+--     'admin',
+--     'admin@gmail.com',
+--     '123456'
+-- );
+
 COMMIT;

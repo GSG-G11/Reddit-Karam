@@ -2,16 +2,16 @@ const Joi = require('joi');
 
 const signupSchema = Joi.object({
     username: Joi.string()
-    .alphanum()
     .min(3)
     .max(35)
     .required(),
 
-    emial: Joi.string()
+    email: Joi.string()
     .email(),
 
     password: Joi.string()
-    .alphanum(),
+    .alphanum()
+    .min(4),
 
     confirmPass: Joi.ref('password')
 });
