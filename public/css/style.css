@@ -481,11 +481,11 @@ form.signup-form{
     border-left: 6px solid #5357F7;
 }
 
-.posts { 
+.main-content { 
     grid-area: 1 / 4 / 2 / 10;
 }
 
-.posts .single-post {
+.single-post {
     background-color: #FFF;
     border-radius: 1rem;
     padding: 1.4rem 1rem;
