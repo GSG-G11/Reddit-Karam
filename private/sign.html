@@ -26,14 +26,20 @@
                     <!-- Form Title -->
                     <h2 class="form-title">Sign in</h2>
                     <!-- Input Field -->
-                    <div class="input-field">
-                        <i class="ri-user-3-fill"></i>
-                        <input type="email" id="email-signin" placeholder="Email">
+                    <div class="input-container">
+                        <div class="input-field">
+                            <i class="ri-mail-fill"></i>
+                            <input type="email" class="signin-input" name="email" id="signin-email" placeholder="Email">
+                        </div>
+                        <p class="error-msg">Input is required!</p>
                     </div>
                     <!-- Input Field -->
-                    <div class="input-field">
-                        <i class="ri-lock-fill"></i>
-                        <input type="password" id="password-signin" placeholder="Password">
+                    <div class="input-container">
+                        <div class="input-field">
+                            <i class="ri-lock-fill"></i>
+                            <input type="password" class="signin-input" name="password" id="signin-password" placeholder="Password">
+                        </div>
+                        <p class="error-msg">Input is required!</p>
                     </div>
                     <button class="btn slolid" type="button" id="login">Login</button>
                 </form>
@@ -43,24 +49,36 @@
                     <!-- Form Title -->
                     <h2 class="form-title">Sign up</h2>
                     <!-- Input Field -->
-                    <div class="input-field">
-                        <i class="ri-user-3-fill"></i>
-                        <input type="text" id="signup-username" placeholder="Username">
+                    <div class="input-container">
+                        <div class="input-field">
+                            <i class="ri-user-3-fill"></i>
+                            <input type="text" name="username" class="signup-input" id="signup-username" placeholder="Username">
+                        </div>
+                        <p class="error-msg">Input is required!</p>
                     </div>
                     <!-- Input Field -->
-                    <div class="input-field">
-                        <i class="ri-mail-fill"></i>
-                        <input type="email" id="signup-email" placeholder="Email Address">
+                    <div class="input-container">
+                        <div class="input-field">
+                            <i class="ri-mail-fill"></i>
+                            <input type="email" name="email" class="signup-input" id="signup-email" placeholder="Email Address">
+                        </div>
+                        <p class="error-msg">Input is required!</p>
                     </div>
                     <!-- Input Field -->
-                    <div class="input-field">
-                        <i class="ri-lock-fill"></i>
-                        <input type="password" id="signup-password" placeholder="Password">
+                    <div class="input-container">
+                        <div class="input-field">
+                            <i class="ri-lock-fill"></i>
+                            <input type="password" name="password" class="signup-input" id="signup-password" placeholder="Password">
+                        </div>
+                        <p class="error-msg">Input is required!</p>
                     </div>
                     <!-- Input Field -->
-                    <div class="input-field">
-                        <i class="ri-lock-fill"></i>
-                        <input type="password" id="signup-confirm" placeholder="Confirm Password">
+                    <div class="input-container">
+                        <div class="input-field">
+                            <i class="ri-lock-fill"></i>
+                            <input type="password" name="Confirm Password" class="signup-input" id="signup-confirm" placeholder="Confirm Password">
+                        </div>
+                        <p class="error-msg">Input is required!</p>
                     </div>
                     <button class="btn slolid" type="button" id="signup">sign up</button>
                 </form>
@@ -89,6 +107,7 @@
     </div>
 
     <!-- Calling JavaScript Files -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/sign.js"></script>
 </body>
 </html>

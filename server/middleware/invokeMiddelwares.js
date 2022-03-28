@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const { join } = require('path');
+const { clientError, serverError } = require('../controller');
 const router = require('../router');
 
 const invokeMiddelwares = (app) => {
@@ -14,6 +15,10 @@ const invokeMiddelwares = (app) => {
     app.use(express.static(join(__dirname, '..', '..', 'public')));
 
     app.use(router)
+
+    // Errors
+    app.use(clientError);
+    app.use(serverError);
 }
 
 
