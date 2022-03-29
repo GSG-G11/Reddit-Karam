@@ -311,6 +311,14 @@ a{
     margin-right: .5rem;
 }
 
+.navbar-menu .btns{
+    display: none;
+}
+
+.navbar-menu.not-logged .btns{
+    display: block;
+}
+
 .navbar-menu .btns .btn{
     font-size: 1rem;
     font-weight: 600;
@@ -327,8 +335,11 @@ a{
     background-color: transparent;
     color: #5458F7;
 }
+.navbar-menu .user {
+    display: none;
+}
 
-.navbar-menu .user{
+.navbar-menu.logged .user{
     display: flex;
     align-items: center;
     position: relative;

@@ -1,4 +1,4 @@
-// const { checkAuth }  = require('../middleware');
+const checkAuth   = require('../middleware/checkAuth');
 const { join } = require('path');
 
 const view = require('express').Router();
@@ -20,7 +20,7 @@ view.get('/show/my-profile', (req, res) => {
 })
 
 // Handle Add Post Page
-view.get('/add-post', (req, res) => {
+view.get('/add-post', checkAuth, (req, res) => {
     res.sendFile(join(__dirname, '..', '..', 'private', 'add-post.html'));
 });
 
