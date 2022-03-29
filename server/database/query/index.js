@@ -1,8 +1,9 @@
 const { signupQuery, checkEmailQuery } = require("./accounts");
-const { addPostQuery } = require("./posts");
+const { addPostQuery, getPostsQueryVoteDesc } = require("./posts");
 
 module.exports = {
     signupQuery,
     checkEmailQuery,
     addPostQuery,
+    getPostsQueryVoteDesc,
 }
