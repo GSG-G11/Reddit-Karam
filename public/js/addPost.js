@@ -6,23 +6,24 @@ const addPost = document.getElementById('add-btn');
 addPost.addEventListener('click', () => {
   const title = postTitle.value;
   const content = postContent.value;
-  const image = postImage.value;
+  const image = postImage.files[0];
 	const user_id = JSON.parse(window.sessionStorage.getItem('user')).id;
-  const post = {
-    title,
-    content,
-    image,
-		user_id 
-  };
 
-	console.log(post);
+  let data = new FormData();
+  data.append('title',title);
+  data.append('content',content);
+  data.append('image',image);
+  data.append('user_id',user_id);
+
+  console.log(image);
+
   if (title) {
     fetch('/api/v1/addPost', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(post),
+      // headers: {
+      //   'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryIn312MOjBWdkffIM',
+      // },
+      body: data,
     })
       .then((res) => {
 				console.log(res);
