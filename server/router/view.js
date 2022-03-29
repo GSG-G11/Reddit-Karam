@@ -3,8 +3,6 @@ const { join } = require('path');
 
 const view = require('express').Router();
 
-// console.log('checkAuth', checkAuth);
-
 // Handle Home Page
 view.get('/', (req, res) => {
     res.sendFile(join(__dirname, '..', '..', 'private', 'index.html'));
