@@ -74,7 +74,7 @@ a{
     transition: 1s .7s ease-in-out;
 }
 
-form{
+.sign-form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,11 +86,11 @@ form{
     transition: .2s .7s ease-in-out;
 }
 
-form.signin-form{
+.sign-form.signin-form{
     z-index: 2;
 }
 
-form.signup-form{
+.sign-form.signup-form{
     z-index: 1;
     opacity: 0;
 }
@@ -269,12 +269,12 @@ form.signup-form{
     left: 25%;
 }
 
-.sign-container.signup-mode form.signin-form{
+.sign-container.signup-mode .sign-form.signin-form{
     z-index: 1;
     opacity: 0;
 }
 
-.sign-container.signup-mode form.signup-form{
+.sign-container.signup-mode .sign-form.signup-form{
     z-index: 2;
     opacity: 1;
 }
@@ -630,6 +630,126 @@ form.signup-form{
 }
 
 
+/* Add Post Page */
+.add-post-form .form-group{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-group label{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0 .2rem;
+}
+
+.form-group label .opt{
+    font-size: .8rem;
+    opacity: .5;
+}
+
+.add-post-form input,
+.add-post-form textarea{
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: .9rem 1rem;
+    border-radius: .6rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.add-post-form input::placeholder,
+.add-post-form textarea::placeholder{
+    color: #999;
+    font-size: .9rem;
+}
+
+.add-post-form textarea{
+    height: 200px;
+    resize: none;
+}
+
+.add-post-form #post-image{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+}
+
+.add-post-form .visible-upload{
+    width: 100%;
+    padding: 1rem 1rem;
+    text-align: center;
+    background-color: #FFF;
+    border: 2px dashed #5356f7b6;
+    border-radius: .5rem;
+}
+
+.visible-upload label{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.visible-upload i{
+    display: inline-block;
+    width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #6668f5;
+}
+
+.form-group.btns{
+    text-align: right;
+}
+
+.form-group .btn{
+    padding: .5rem 1.5rem;
+    border-radius: 5px; 
+    margin-right: .5rem;
+    background-color: rgba(207, 207, 207, 0.349);
+    font-family:'Nunito Sans', sans-serif;
+    font-size: 600;
+    font-size: 1rem;
+}
+
+.form-group .btn.add-btn{
+    background-color: #5357F7;
+    color: #FFF;
+}
+
+
+/* Error Pages */
+.error-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 3rem 1rem;
+}
+
+.error-content .err-img{
+    width: 100%;
+    max-width: 500px;
+    display: inline-block;
+    margin-bottom: 4rem;
+}
+
+.error-content .back{
+    display: inline-block;
+    padding: .7rem 1.2rem;
+    background-color: #5458F7;
+    color: #FFF;
+    font-size: 1rem;
+    transition: .5s;
+}
+
+.error-content .back:hover{
+    background-color: #3f41c4;
+}
+
 /* Style Page Footer */
 .page-footer{
     background-color: #FFF;
@@ -642,3 +762,4 @@ form.signup-form{
     color: #5357F7;
     font-weight: 600;
 }
+

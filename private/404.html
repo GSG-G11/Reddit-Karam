@@ -18,7 +18,63 @@
     <title>Socially</title>
 </head>
 <body>
-    <h1>404 Error!</h1>
+    <div class="all-page">
+        <!-- Start Page Header -->
+        <header class="page-header">
+            <nav class="navbar">
+                <div class="navbar-logo">
+                    <a href="/">
+                        <img src="/img/logo.svg" alt="logo">
+                        Socially
+                    </a>
+                </div>
+                <div class="navbar-menu">
+                    <!-- <div class="btns">
+                        <a href="/sign" class="btn login">Login</a>
+                        <a href="/sign#signup-mode" class="btn signup">Signup</a>
+                    </div> -->
+                    <div class="user">
+                        <a href="/show/myprofile" class="username">dev.karamz</a>
+                        <button class="btn toggle-btn" id="dropdown-toggle">
+                            <img src="/img/user-default.png" alt="User Pic">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="dropdown-menu" id="dropdown-menu">
+                            <div class="greeting">
+                                <p>Hi, <span class="username">dev.karamz</span></p>
+                            </div>
+                            <a href="/show/my-profile" class="dropdown-item">
+                                <i class="ri-user-3-line"></i>
+                                <span>My profile</span>
+                            </a>
+                            <a href="/logout" class="dropdown-item">
+                                <i class="ri-logout-circle-line"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End Page Header -->
+        
+        <!-- Start Page Content -->
+        <main class="page-content">
+            <div class="container">
+                <div class="error-content">
+                    <img src="/img/404.svg" class="err-img" alt="Page Not Found">
+                    <a href="/" class="back">Back Home</a>
+                </div>
+            </div>
+        </main>
+        <!-- End Page Content -->
+        
+        <!-- Start Page Footer -->
+        <footer class="page-footer">
+            <p class="copyright">Made With Love By <a href="https://www.behance.net/karamzomlut1">Karam Zomlot</a></p>
+        </footer>
+        <!-- End Page Footer -->
+    </div>
 
     <!-- Calling JavaScript Files -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
