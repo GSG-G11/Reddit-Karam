@@ -1,5 +1,7 @@
-const invokeMiddelwares = require("./invokeMiddelwares");
+const checkAuth = require('./checkAuth');
+const invokeMiddelwares = require('./invokeMiddelwares');
 
 module.exports = {
-    invokeMiddelwares,
-}
+  invokeMiddelwares,
+  checkAuth,
+};
