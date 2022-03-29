@@ -16,7 +16,7 @@ CREATE TABLE posts (
     content TEXT,
     image BYTEA,
     user_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 CREATE TABLE comments (
@@ -25,15 +25,15 @@ CREATE TABLE comments (
     date DATE NOT NULL,
     user_id INT NOT NULL,
     post_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (post_id) REFERENCES posts(id)
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
 );
 
 CREATE TABLE categories (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50),
     post_id INT NOT NULL,
-    FOREIGN KEY (post_id) REFERENCES posts(id)
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
 );
 
 CREATE TABLE votes (
@@ -41,8 +41,8 @@ CREATE TABLE votes (
     vote_status BOOLEAN,
     user_id INT NOT NULL,
     post_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (post_id) REFERENCES posts(id)
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
 );
 
 -- INSERT INTO users (username, email, password) VALUES (
