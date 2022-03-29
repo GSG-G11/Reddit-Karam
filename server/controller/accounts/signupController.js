@@ -33,6 +33,7 @@ const signupController = (req, res, next) => {
       return signupQuery(user);
     })
     .then(result => {
+      console.log(result.rows[0]);
       id = result.rows[0].id;
       return signAsync(result.rows[0]);
     })

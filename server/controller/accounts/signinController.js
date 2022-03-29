@@ -15,6 +15,7 @@ const signinController = (req, res, next) => {
                 user.id = result.rows[0].id;
                 user.username = result.rows[0].username;
                 user.email = result.rows[0].email;
+                user.image = result.rows[0].image;
                 return bcrypt.compare(password, result.rows[0].password)
             } else {
                 throw customizseError('Email or Password is Wrong!', 400)

@@ -45,10 +45,10 @@ CREATE TABLE votes (
     FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
 );
 
--- INSERT INTO users (username, email, password) VALUES (
---     'admin',
---     'admin@gmail.com',
---     '123456'
--- );
+INSERT INTO users (username, email, password) VALUES (
+    'admin',
+    'admin@gmail.com',
+    '$2b$10$x7XXXMFrMbmQrku.rAxZs.D1tgrynZzqdHmTZiBN40qwyxUtwuGZu'
+);
 
 COMMIT;

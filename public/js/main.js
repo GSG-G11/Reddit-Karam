@@ -5,4 +5,4 @@ const dropdownToggle = document.querySelector('#dropdown-toggle');
 dropdownToggle.addEventListener('click', (e) => {
     e.preventDefault();
     dropdownMenu.classList.toggle('show');
-})
+});
