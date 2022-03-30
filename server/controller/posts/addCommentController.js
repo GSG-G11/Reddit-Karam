@@ -13,7 +13,9 @@ const addCommentController = (req, res, next) => {
         return addCommentQuery(commentData)
     })  
     .then((data) => {
-        console.log(data.rows[0]);
+        res
+        .status(201)
+        .json({msg: 'Comment created successfully!', data: data.rows[0]});
     })
     .catch(err => next(err));
 }

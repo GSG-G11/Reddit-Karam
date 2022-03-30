@@ -848,3 +848,19 @@ a{
     font-weight: 600;
     color: #999;
 }
+
+
+/* Style Proifle Page Html */
+.user-content{
+    text-align: center;
+}
+
+.user-content .user-pic{
+    margin-bottom: 1rem;
+}
+
+.user-content .username{
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

@@ -1,6 +1,17 @@
 const postContent = document.getElementById('post-content');
 
 const generatePosts = (post) => {
+    let post_image;
+        if(post.post_image){
+            post_image = `<div class="post-image">
+                            <a href="/show/${post.id}/single-post">
+                                <img src="${post.post_image}" alt="Post Image">
+                            </a>
+                        </div>`;
+        }
+        else {
+            post_image = '';
+        }
     let html = `<div class="single-post" id="${post.id}">
                     <div class="post-info">
                         <div class="user-pic">
@@ -16,11 +27,7 @@ const generatePosts = (post) => {
                         </div>
                     </div>
 
-                    <div class="post-image">
-                        <a href="/show/${post.id}/single-post">
-                            <img src="${post.post_image}" alt="Post Image">
-                        </a>
-                    </div>
+                    ${post_image}
 
                     <div class="post-content">
                         <p>
@@ -141,7 +148,8 @@ addComment.addEventListener('click', (e) => {
         })
         .then(data => data.json())
         .then(res => {
-            fetchComments();
+            console.log('karam');
+            window.location.reload();
         })
         .catch(err => console.log('err', err));
     }

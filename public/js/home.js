@@ -3,6 +3,17 @@ const postsContainer = document.getElementById('posts-container');
 const generatePosts = (posts) => {
     let html = '';
     posts.forEach(post => {
+        let post_image;
+        if(post.post_image){
+            post_image = `<div class="post-image">
+                            <a href="/show/${post.id}/single-post">
+                                <img src="${post.post_image}" alt="Post Image">
+                            </a>
+                        </div>`;
+        }
+        else {
+            post_image = '';
+        }
         html += `<div class="single-post" id="${post.id}">
                     <div class="post-info">
                         <div class="user-pic">
@@ -17,13 +28,7 @@ const generatePosts = (posts) => {
                             </p>
                         </div>
                     </div>
-
-                    <div class="post-image">
-                        <a href="/show/${post.id}/single-post">
-                            <img src="${post.post_image}" alt="Post Image">
-                        </a>
-                    </div>
-
+                    ${post_image}
                     <div class="post-content">
                         <p>
                             <a href="/show/${post.id}/single-post">
