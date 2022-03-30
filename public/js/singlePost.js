@@ -79,7 +79,7 @@ const generateComments = (comments) => {
                         </div>
                         <div class="info">
                             <h4 class="username">
-                                <a href="/show/${comment.user_id}/user">admin</a>
+                                <a href="/show/${comment.user_id}/user">${comment.username}</a>
                             </h4>
                             <p class="comment-date">
                                 <span class="value">1 min ago</span>
