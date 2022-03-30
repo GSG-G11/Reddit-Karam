@@ -1,8 +1,11 @@
-const { checkEmailQuery, signupQuery, addPostQuery, getPostsQueryVoteDesc } = require("./query");
+const { checkEmailQuery, signupQuery, addPostQuery, getPostsQueryVoteDesc, getSinglePostQuery, addCommentQuery, getSinglePostCommentsQuery } = require("./query");
 
 module.exports = {
     signupQuery,
     checkEmailQuery,
     addPostQuery,
     getPostsQueryVoteDesc,
+    getSinglePostQuery,
+    addCommentQuery,
+    getSinglePostCommentsQuery,
 }

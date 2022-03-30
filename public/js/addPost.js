@@ -15,8 +15,6 @@ addPost.addEventListener('click', () => {
   data.append('image',image);
   data.append('user_id',user_id);
 
-  console.log(image);
-
   if (title) {
     fetch('/api/v1/addPost', {
       method: 'POST',
@@ -26,7 +24,6 @@ addPost.addEventListener('click', () => {
       body: data,
     })
       .then((res) => {
-				console.log(res);
         if (res.status === 201) {
 					// window.location.href = '/';
 					Swal.fire({

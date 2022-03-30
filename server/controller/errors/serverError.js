@@ -1,7 +1,6 @@
 const { join } = require('path');
 
 const serverError = (err, req, res, next) => {
-    console.log(err);
     if (err.status) {
         res
         .status(err.status)

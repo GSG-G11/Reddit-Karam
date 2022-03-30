@@ -12,11 +12,10 @@ const addPostController = (req, res, next) => {
     };
     addPostSchema.validateAsync({ title, content })
     .then((data) => {
-        const { title, content, image, user_id } = post;
+        const { title, content, post_image, user_id } = post;
         return addPostQuery({ title, content, post_image, user_id })
     })
     .then((data) => {
-        console.log(data.rows[0]);
         if(data.rows.length){
             res
             .status(201)

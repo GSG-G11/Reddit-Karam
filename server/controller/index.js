@@ -1,6 +1,6 @@
 const { signupController, signinController } = require("./accounts");
 const { clientError, serverError } = require("./errors");
-const { addPostController, getPostsController } = require("./posts");
+const { addPostController, getPostsController, getSinglePostController, addCommentController, getSinglePostCommentsController } = require("./posts");
 
 
 module.exports = {
@@ -10,4 +10,7 @@ module.exports = {
     signinController,
     addPostController,
     getPostsController,
+    getSinglePostController,
+    addCommentController,
+    getSinglePostCommentsController,
 }

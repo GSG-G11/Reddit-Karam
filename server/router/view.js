@@ -22,6 +22,10 @@ view.get('/add-post', checkAuth, (req, res) => {
     res.sendFile(join(__dirname, '..', '..', 'private', 'add-post.html'));
 });
 
+view.get('/show/:id/single-post', (req, res) => {
+    res.sendFile(join(__dirname, '..', '..', 'private', 'single-post.html'));
+})
+
 // Handle Signin && Signup Page
 view.get('/sign', (req, res) => {
     res.sendFile(join(__dirname, '..', '..', 'private', 'sign.html'));
