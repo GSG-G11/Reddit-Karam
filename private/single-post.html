@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon">
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Calling CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media.css">
+    <!-- Page Title -->
+    <title>Socially</title>
+</head>
+<body>
+    <div class="all-page">
+        <!-- Start Page Header -->
+        <header class="page-header">
+            <nav class="navbar">
+                <div class="navbar-logo">
+                    <a href="/">
+                        <img src="/img/logo.svg" alt="logo">
+                        Socially
+                    </a>
+                </div>
+                <div class="navbar-menu">
+                    <div class="btns">
+                        <a href="/sign" class="btn login">Login</a>
+                        <a href="/sign#signup-mode" class="btn signup">Signup</a>
+                    </div>
+                    <div class="user">
+                        <a href="/show/myprofile" class="username">dev.karamz</a>
+                        <button class="btn toggle-btn" id="dropdown-toggle">
+                            <img src="/img/user-default.png" alt="User Pic">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="dropdown-menu" id="dropdown-menu">
+                            <div class="greeting">
+                                <p>Hi, <span class="username">dev.karamz</span></p>
+                            </div>
+                            <a href="/show/my-profile" class="dropdown-item">
+                                <i class="ri-user-3-line"></i>
+                                <span>My profile</span>
+                            </a>
+                            <a href="/logout" class="dropdown-item">
+                                <i class="ri-logout-circle-line"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End Page Header -->
+        
+        <!-- Start Page Content -->
+        <main class="page-content">
+            <div class="container">
+                <div class="home-content">
+                    <!-- Start Left Side -->
+                    <aside class="left-side">
+                        <nav class="side-navigation">
+                            <ul class="clasic-list">
+                                <li>
+                                    <a href="/" class="item-link active">
+                                        <i class="ri-newspaper-line"></i>
+                                        <span>New Feeds</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/add-post" class="item-link ">
+                                        <i class="ri-add-box-line"></i>
+                                        <span>Add Post</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/search" class="item-link">
+                                        <i class="ri-search-line"></i>
+                                        <span>Search</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/show/myfollowers" class="item-link">
+                                        <i class="ri-user-received-line"></i>
+                                        <span>Followers</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/show/myfollowing" class="item-link">
+                                        <i class="ri-user-follow-line"></i>
+                                        <span>Following</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/show/my-profile" class="item-link">
+                                        <i class="ri-settings-line"></i>
+                                        <span>My Profile</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+                    <!-- End Left Side -->
+
+                    <!-- Start Posts Section -->
+                    <section class="main-content">
+                        <div class="post-content" id="post-content">
+                            <!-- Your Posts Here -->
+                        </div>
+                        <div class="comments" id="comments">
+                            <form class="comment-form">
+                                <div class="form-group">
+                                    <textarea name="post-content" id="comment" class="form-control" placeholder="Add Your Comment..."></textarea>
+                                </div>
+                                <div class="form-group btns">
+                                    <button class="btn add-btn" type="button" id="add-comment">Send</button>
+                                </div>
+                            </form>
+
+                            <div class="title">Post Comments</div>
+                            <div class="post-comments" id="post-commnets">
+                                <!-- Your Comments Here --> 
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Posts Section -->
+
+                    <!-- Start Right Side -->
+                    <aside class="right-side">
+                        <!-- Single Banner -->
+                        <div class="single-banner">
+                            <h5 class="banner-title">
+                                <a href="#">Ad Title</a>
+                            </h5>
+                            <a href="https://ads.google.com">
+                            <img src="/img/banner-image.png" alt="Banner">
+                            </a>
+                        </div>
+                        <!-- Single Banner -->
+                        <div class="single-banner">
+                            <h5 class="banner-title">
+                                <a href="#">Ad Title</a>
+                            </h5>
+                            <a href="https://ads.google.com">
+                            <img src="/img/banner-image.png" alt="Banner">
+                            </a>
+                        </div>
+                        <!-- Single Banner -->
+                        <div class="single-banner">
+                            <h5 class="banner-title">
+                                <a href="#">Ad Title</a>
+                            </h5>
+                            <a href="https://ads.google.com">
+                            <img src="/img/banner-image.png" alt="Banner">
+                            </a>
+                        </div>
+                    </aside>
+                    <!-- End Right Side -->
+                </div>
+            </div>
+        </main>
+        <!-- End Page Content -->
+        
+        <!-- Start Page Footer -->
+        <footer class="page-footer">
+            <p class="copyright">Made With Love By <a href="https://www.behance.net/karamzomlut1">Karam Zomlot</a></p>
+        </footer>
+        <!-- End Page Footer -->
+    </div>
+
+    <!-- Calling JavaScript Files -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/fetch.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/singlePost.js"></script>
+</body>
+</html>

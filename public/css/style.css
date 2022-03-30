@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body, input{
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -774,3 +778,73 @@ a{
     font-weight: 600;
 }
 
+/* Single Post Page */
+.comment-form{
+    margin-bottom: 1.5rem;
+}
+
+.comment-form .form-group{
+    margin-bottom: 1rem;
+}
+
+.comment-form textarea{
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0.9rem 1rem;
+    border-radius: 0.6rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    max-width: 100%;
+    min-height: 110px;
+}
+
+.comment-form .btn{
+    margin: 0;
+}
+
+.comments .title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1rem;
+    padding: 0 .2rem;
+}
+
+.post-comments .single-comment{
+    background-color: #FFF;
+    border-radius: 1rem;
+    padding: 1.4rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.comment-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.comment-info .info {
+    margin-bottom: 0.2rem;
+}
+
+.comment-info .user-pic img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+}
+
+.comment-info .username {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.comment-info .post-date {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #999;
+}

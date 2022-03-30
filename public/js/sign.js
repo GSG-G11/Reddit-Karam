@@ -121,7 +121,6 @@ signin.addEventListener('click', (e) => {
         })
         .then(data => data.json())
         .then(res => {
-            console.log(res);
             if (res.msg === 'ValidationError'){
                 res.err.details.forEach(ele => {
                     if (ele.path[0] === 'email'){

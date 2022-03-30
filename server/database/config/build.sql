@@ -22,7 +22,7 @@ CREATE TABLE posts (
 CREATE TABLE comments (
     id SERIAL PRIMARY KEY,
     content TEXT NOT NULL,
-    date DATE NOT NULL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_id INT NOT NULL,
     post_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
@@ -54,8 +54,7 @@ CREATE TABLE votes (
 -- Get All Posts Query
 
 -- SELECT 
--- p.id, p.title, p.content, p.image, p.user_id,
--- u.image,
+-- p.id, p.title, p.content, p.user_id,
 -- (SELECT COUNT(v.id) FROM votes v WHERE (v.vote_status = true AND v.post_id = p.id)) AS up_count,
 -- (SELECT COUNT(v.id) FROM votes v WHERE (v.vote_status = false AND v.post_id = p.id)) AS down_count,
 -- (SELECT COUNT(c.id) FROM comments c WHERE c.post_id = p.id) AS comments_count
@@ -65,10 +64,10 @@ CREATE TABLE votes (
 -- JOIN users u 
 -- ON u.id = p.user_id
 
+-- WHERE p.id = 1
+
 -- GROUP BY
 -- p.id,
--- u.image,
--- u.username
--- ORDER BY up_count DESC;
+-- u.username;
 
 COMMIT;
