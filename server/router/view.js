@@ -10,7 +10,7 @@ view.get('/', (req, res) => {
 
 // Handle Profile Page
 view.get('/show/:id/user', (req, res) => {
-    res.sendFile(join(__dirname, '..', '..', 'private', 'profile.html'));
+    res.sendFile(join(__dirname, '..', '..', 'private', 'user-profile.html'));
 });
 
 view.get('/show/my-profile', (req, res) => {

@@ -1,4 +1,4 @@
-const { signupQuery, checkEmailQuery } = require("./accounts");
+const { signupQuery, checkEmailQuery, getUserQuery } = require("./accounts");
 const { addPostQuery, getPostsQueryVoteDesc, getSinglePostQuery, addCommentQuery, getSinglePostCommentsQuery } = require("./posts");
 
 module.exports = {
@@ -9,4 +9,5 @@ module.exports = {
     getSinglePostQuery,
     addCommentQuery,
     getSinglePostCommentsQuery,
+    getUserQuery,
 }
