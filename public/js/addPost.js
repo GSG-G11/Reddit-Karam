@@ -18,14 +18,10 @@ addPost.addEventListener('click', () => {
   if (title) {
     fetch('/api/v1/addPost', {
       method: 'POST',
-      // headers: {
-      //   'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryIn312MOjBWdkffIM',
-      // },
       body: data,
     })
       .then((res) => {
         if (res.status === 201) {
-					// window.location.href = '/';
 					Swal.fire({
 						icon: 'success',
 						title: 'Great!',
